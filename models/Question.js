@@ -42,6 +42,13 @@ class Question {
   // FIXME: Implement async / await
   static Print(id){
     const question = Question.Find(id)
+    
+    setTimeout(function(){
+      const theQuestion = Question._All[id-1]
+      console.log("Printing out the requested question")
+      console.log("\n")
+      console.log(theQuestion)   
+    },1500)
 
     console.log("\n")
     console.log(question.content)
